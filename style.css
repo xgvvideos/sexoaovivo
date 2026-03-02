@@ -1,18 +1,32 @@
 
 
-  
-  html { background-color: white; /* Cor da margem externa */ } 
+html {                
+    /* Opcional: cor de fundo enquanto a imagem carrega */
+    background-color: white; 
+} 
 
-  
+body { 
+    /* --- A MUDANÇA ESTÁ AQUI --- */
+    background-image: url('imagem/Sexo-ao-vivo-de-homem-nu-batendo-punheta-e-gozando(2).jpg'); /* Substitua pelo link da sua foto */
+    background-size: cover;        /* Faz a imagem cobrir todo o fundo */
+    background-position: center;   /* Centraliza a imagem */
+    background-repeat: no-repeat;  /* Não repete a imagem */
+    background-attachment: fixed;  /* (Opcional) A imagem fica fixa ao rolar a página */
+    /* -------------------------- */
+    
+    border: 1px solid Black; 
+    border-radius: 10px;
+    margin: 10px;  
+    text-align: center; 
+    align-items: center; 
+    color: black; 
+}
 
-  body { background-color:  #00BFFF; 
-         border: 1px solid Black; 
-         border-radius: 10px;
-         margin: 10px;  
-         text-align: center; 
-         align-items: center; 
-         color: black; 
-         * + * { margin-top: 10px; }
+/* Nota: Verifiquei um erro de sintaxe no seu código:
+   * + * { margin-top: 10px; }
+   Parece estar faltando fechar uma chave } antes dessa linha. */
+
+
          
          
     
