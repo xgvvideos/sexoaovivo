@@ -19,17 +19,18 @@ body {
 
 
 
-    
-    border: 1px solid black; 
-    border-radius: 10px;
-    margin: 10px;  
-    text-align: center; 
-    align-items: center; 
-    color: black;  }
+    .container-pai {
+    display: flex;
+    justify-content: center; /* Centraliza a caixa horizontalmente */ }
 
-/* Nota: Verifiquei um erro de sintaxe no seu código:
-   * + * { margin-top: 10px; }
-   Parece estar faltando fechar uma chave } antes dessa linha. */
+.sua-classe {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    color: black;
+    width: fit-content; /* Opcional: faz a borda abraçar o texto */ }
+
 
 
          
