@@ -61,22 +61,60 @@ body {
     // Navegação//
        
 
+
+/* Reset básico para remover margens padrão */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; }
+
+/* Container da Navbar */
+.navbar {
+    background-color: #333; /* Cor de fundo escura */
+    width: 100%;
+    position: sticky; /* Fica no topo ao rolar */
+    top: 0;
+    z-index: 1000; }
+
+/* Lista */
 .navbar ul {
-  display: flex;
-  flex-wrap: wrap; /* Faz os itens pularem para baixo */
-  justify-content: center; /* Centraliza os itens */
-  padding: 0;
-  list-style: none; }
+    list-style-type: none; /* Remove bolinhas */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinha horizontalmente */
+    justify-content: center; /* Centraliza o menu (use 'flex-end' para direita) */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */ }
 
+/* Itens da lista */
 .navbar li {
-  margin: 5px 10px; /* Adiciona espaçamento entre os botões */ }
+    padding: 0; }
 
+/* Links */
 .navbar a {
-  display: block;
-  text-decoration: none;
-  padding: 10px;
-  background-color: #f0f0f0; /* Exemplo de fundo */
-  border-radius: 5px; }
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Animação suave */ }
+
+/* Efeito Hover (passar o mouse) */
+.navbar a:hover {
+    background-color: #f4f4f4;
+    color: #333; }
+
+/* Responsividade: Telas menores que 600px */
+@media screen and (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column; /* Empilha os itens verticalmente *  }
+    .navbar a {
+        padding: 12px;
+        border-bottom: 1px solid #555; } }
+
+
+
+
+
 
 
     
