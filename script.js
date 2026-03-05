@@ -52,26 +52,7 @@ stopButton.addEventListener('click', () => {
                 
                 
                 messagesContainer.scrollTop = messagesContainer.scrollHeight;   }    });
-
-
-
-
-
-
-
-      
-    // Exemplo de Javascript para Web Share API
-if (navigator.share) {
-  document.querySelector('#meuBotaoCompartilhar').addEventListener('click', () => {
-    navigator.share({
-      title: 'Título da Página',
-      url: window.location.href
-    }).then(() => {
-      console.log('Compartilhado com sucesso');
-    }).catch(console.error);  }); }
-
-
-
+    
 
 
 
