@@ -74,25 +74,31 @@ function copiarPix() {
 
 
 
+    <script>
     document.addEventListener("DOMContentLoaded", function() {
         const video = document.getElementById("meuVideo");
         const viewCountSpan = document.getElementById("view-count");
-        let viewCount = localStorage.getItem("videoViews") || 0;
+        
+        // 1. Corrige: Converte o valor de localStorage para Número usando parseInt()
+        let viewCount = parseInt(localStorage.getItem("videoViews")) || 0;
 
         // Exibe o total atual ao carregar a página
         viewCountSpan.innerText = viewCount;
 
         // Incrementa quando o vídeo é reproduzido
         video.addEventListener("play", function() {
-            // Conta apenas uma vez por sessão/recarregamento
-            if (video.currentTime === 0) {
+            // 2. Melhora: Conta a visualização apenas uma vez por recarregamento
+            // Usamos uma flag na sessão para saber se já contamos nesta visita
+            if (!sessionStorage.getItem("viewCounted")) {
                 viewCount++;
                 localStorage.setItem("videoViews", viewCount);
                 viewCountSpan.innerText = viewCount;
                 
-                // Opcional: Enviar AJAX para o seu servidor aqui para
-                // persistir os dados no banco de dados.
+                // Marca na sessão que já contabilizou
+                sessionStorage.setItem("viewCounted", "true");
+                
                 console.log("Visualização contabilizada: " + viewCount);
             }
-        }, { once: false }); // Mude para true se quiser contar apenas 1 play por recarregamento da página
+        });
     });
+</script>
